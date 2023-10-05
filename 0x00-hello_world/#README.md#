@@ -3,8 +3,7 @@ You can create a `README.md` file in tabular form to document the instructions f
 ```markdown
 # Project: alx-low_level_programming - 0x00-hello_world
 
-This project contains a script that runs a C file through the preprocessor and saves the result into another file. The script takes the C file name from the `$CFILE` environment variable.
-
+This project contains a 
 ## Instructions
 
 1. Set the C file name in the `$CFILE` environment variable. For example:

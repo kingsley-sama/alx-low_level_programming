@@ -1,31 +1,10 @@
-You can create a `README.md` file in tabular form to document the instructions for your project. Here's how you can structure it:
+# 0d00-hello_world
 
 ```markdown
-# Project: alx-low_level_programming - 0x00-hello_world
-
-This project contains a script that runs a C file through the preprocessor and saves the result into another file. The script takes the C file name from the `$CFILE` environment variable.
-
-## Instructions
-
-1. Set the C file name in the `$CFILE` environment variable. For example:
-   
-   ```bash
-   export CFILE=main.c
-   ```
-
-2. Run the script:
-
-   ```bash
-   ./0-preprocessor
-   ```
-
-3. The preprocessed code will be saved in the file `c`.
-
 ## File Contents
 
-| Filename | Description |
-| -------- | ----------- |
-| `main.c` | Example C file with a simple `main` function. |
+| Filename | Description | Returns |
+| -------- | ----------- | ------- |
 | `0-preprocessor` | Shell script that runs the C file through the preprocessor and saves the result. |
 | `c` | Output file containing the preprocessed code. |
 
