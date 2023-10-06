@@ -1,11 +1,19 @@
 #include <stdio.h>
 
 /**
- * main - print a message
+ * main - Print lowercase alphabets followed by uppercase
+ *alphabets and a new line
  * Return: 0
  */
 int main(void)
 {
-	printf("with proper grammar, but the outcome is a piece of art,\n");
+	int a = 97;
+	int b = 65;
+
+	for (; a < 124; a++)
+		putchar(a);
+	for (; b < 92; b++)
+		putchar(b);
+	putchar('\n');
 	return (0);
 }
