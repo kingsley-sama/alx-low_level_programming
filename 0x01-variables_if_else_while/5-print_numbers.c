@@ -2,6 +2,7 @@
 
 /**
  * main - Prints single variable numbers
+ *in a single line
  * Return: 0
  */
 int main(void)
