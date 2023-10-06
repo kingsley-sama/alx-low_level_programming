@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * main - Checks to see if a variable is positive
  * Return: 0
@@ -7,7 +8,7 @@ int main(void)
 {
 	int n;
 
-	n = 0;
+	n = rand();
 	if (n > 0)
 		printf("%d is positive\n", n);
 	else if (n == 0)
