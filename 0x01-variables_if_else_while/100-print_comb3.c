@@ -15,18 +15,20 @@ int main(void)
 
 		for (; b < 58; b++)
 		{
-
-			putchar(a);
-			putchar(b);
-			if (a == 57 && b == 57)
+			if (a < b)
 			{
+				putchar(a);
+				putchar(b);
+				if (a != 56 || b != 57)
+				{
+					putchar(44);
+					putchar(32);
+				}
+
 			}
 			else
 			{
-				putchar(44);
-				putchar(32);
 			}
-
 		}
 	};
 
