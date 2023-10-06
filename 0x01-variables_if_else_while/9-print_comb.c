@@ -11,13 +11,13 @@ int main(void)
 
 	for (; a < 58; a++)
 	{
+		putchar(a);
 		if (a == 57)
 		{
-			putchar(a);
+
 		}
 		else
 		{
-			putchar(a);
 			putchar(44);
 			putchar(32);
 		}
