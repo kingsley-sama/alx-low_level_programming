@@ -20,21 +20,26 @@ int main(void)
 
 			for (; c < 58; c++)
 			{
-				if (a < b && b < c)
-				{
-					putchar(a);
-					putchar(b);
-					putchar( c);
-					if (a != 55 || b != 56 || c != 57)
-					{
-						putchar(44);
-						putchar(32);
-					}
+				int d = 48;
 
-				}
-				else
+				for (; d < 58; d++)
 				{
+					if (a + b < c +d )
+					{
+						putchar(a);
+						putchar(b);
+						putchar(32);
+						putchar(c);
+						putchar(d);
+						if (a != 57 || b != 56 || c != 57 || d != 57)
+						{
+							putchar(44);
+							putchar(32);
+						}
+
+					}
 				}
+
 			}
 
 		}
