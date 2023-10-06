@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Print lowercase alphabets followed by uppercase
- *alphabets and a new line
+ * main - Prints single variable numbers
  * Return: 0
  */
 int main(void)
@@ -11,8 +10,8 @@ int main(void)
 
 	for (; a < 10; a++)
 	{
-		printf("%d\n",a);
+		printf("%d", a);
 	}
-
+	putchar('\n');
 	return (0);
 }
