@@ -8,9 +8,8 @@
 int main(void)
 {
 	int a = 97;
-	int b = 65;
 
-	for (; a < 124; a++)
+	for (; a < 12; a++)
 		putchar(a);
 	putchar('\n');
 	return (0);
