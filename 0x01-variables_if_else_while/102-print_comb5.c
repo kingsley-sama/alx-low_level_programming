@@ -1,49 +1,35 @@
 #include <stdio.h>
 
-/**
- * main - Print lowercase alphabets followed by uppercase
- *alphabets and a new line
- * Return: 0
- */
 int main(void)
 {
-	int a = 48;
+	int a, b, c, d;
 
-	for (; a < 58; a++)
+	for (a = 0; a <= 9; a++)
 	{
-
-		int b = 48;
-
-		for (; b < 58; b++)
+		for (b = 0; b <= 9; b++)
 		{
-			int c = 48;
-
-			for (; c < 58; c++)
+			for (c = 0; c <= 9; c++)
 			{
-				int d = 48;
-
-				for (; d < 58; d++)
+				for (d = 0; d <= 9; d++)
 				{
-					if (a + b < c + d)
+					if (a * 10 + b <= c * 10 + d)
 					{
-						putchar(a);
-						putchar(b);
-						putchar(32);
-						putchar(c);
-						putchar(d);
-						if (a != 57 || b != 56 || c != 57 || d != 57)
-						{
-							putchar(44);
-							putchar(32);
-						}
+						putchar(a + '0');
+						putchar(b + '0');
+						putchar(' ');
+						putchar(c + '0');
+						putchar(d + '0');
 
+						if (!(a == 9 && b == 9 && c == 9 && d == 9))
+						{
+							putchar(',');
+							putchar(' ');
+						}
 					}
 				}
-
 			}
-
 		}
-	};
+	}
 
 	putchar('\n');
 	return (0);
