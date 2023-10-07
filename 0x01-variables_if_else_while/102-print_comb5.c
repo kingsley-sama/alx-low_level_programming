@@ -1,36 +1,49 @@
 #include <stdio.h>
 
 /**
- * main - Print unique pairs of two-digit numbers in ascending order
+ * main - Print lowercase alphabets followed by uppercase
+ *alphabets and a new line
  * Return: 0
  */
 int main(void)
 {
-	int a, b, c, d;
+	int a = 48;
 
-	for (a = '0'; a <= '9'; a++)
+	for (; a < 58; a++)
 	{
-		for (b = a; b <= '9'; b++)
-		{
-			for (c = '0'; c <= '9'; c++)
-			{
-				for (d = (a == b) ? (b + 1) : '0'; d <= '9'; d++)
-				{
-					putchar(a);
-					putchar(b);
-					putchar(' ');
-					putchar(c);
-					putchar(d);
 
-					if (a != '9' || b != '8' || c != '9' || d != '9')
+		int b = 48;
+
+		for (; b < 58; b++)
+		{
+			int c = 48;
+
+			for (; c < 58; c++)
+			{
+				int d = 48;
+
+				for (; d < 58; d++)
+				{
+					if (a + b < c + d)
 					{
-						putchar(',');
-						putchar(' ');
+						putchar(a);
+						putchar(b);
+						putchar(32);
+						putchar(c);
+						putchar(d);
+						if (a != 57 || b != 56 || c != 57 || d != 57)
+						{
+							putchar(44);
+							putchar(32);
+						}
+
 					}
 				}
+
 			}
+
 		}
-	}
+	};
 
 	putchar('\n');
 	return (0);
