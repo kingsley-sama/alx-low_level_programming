@@ -19,11 +19,11 @@ void jack_bauer(void)
 			d = j % 10; /* singles snum */
 			_putchar(a + '0');
 			_putchar(b + '0');
-			_putchar(58);
+			_putchar(':');
 			_putchar(c + '0');
 			_putchar(d + '0');
 			_putchar('\n');
 		}
 	}
-	_putchar(10);
+	_putchar('\n');
 }
