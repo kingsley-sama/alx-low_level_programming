@@ -13,14 +13,13 @@ int print_last_digit(int a)
 
 	if (a >= 0)
 	{
-		b = (a % 10);
-		c = b + 44;
-		return (c);
+		b = a % 10;
+		return (b);
 	}
 	else
 	{
 		b = (a % 10);
-		c = -1 * b + 44;
+		c = -1 * b;
 		return (c);
 	}
 	return (0);
