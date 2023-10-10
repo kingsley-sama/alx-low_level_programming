@@ -9,7 +9,7 @@ int main(void)
 	int i = 0;
 	char array[] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r'};
 
-	while (i < (sizeof(array) / sizeof(array[0])))
+	while (array[i] != '\0')
 	{
 		_putchar(array[i]);
 		i++;
