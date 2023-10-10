@@ -18,19 +18,11 @@ void times_table(void)
 			b = a / 10;
 			c = a % 10;
 
-			if (j != 0)
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
-
-			if (b > 0)
-				_putchar(b + '0');
-			else
-				_putchar(' ');
-
+			_putchar(b > 0 ? b + '0' : ' ');
 			_putchar(c + '0');
+
+			_putchar(j < 9 ? ',' : '\n');
+			_putchar(' ');
 		}
-		_putchar('\n');
 	}
 }
