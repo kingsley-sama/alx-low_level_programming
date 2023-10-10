@@ -21,8 +21,14 @@ void times_table(void)
 			if (b > 0)
 			{
 				_putchar(b + 48);
+				_putchar(c + 48);
 			}
-			_putchar(c + 48);
+			else if (b <= 0)
+			{
+				_putchar(' ');
+				_putchar(c + 48);
+			}
+
 			_putchar(',');
 			_putchar(' ');
 		}
