@@ -35,6 +35,7 @@ void times_table(void)
 			{
 				_putchar(' ');
 				_putchar(c + 48);
+				_putchar('\n');
 			}
 			else if (b > 0 && j == 9)
 			{
@@ -42,6 +43,6 @@ void times_table(void)
 				_putchar(c + 48);
 			}
 		}
-		_putchar('\n');
+
 	}
 }
