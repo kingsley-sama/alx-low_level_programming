@@ -1,25 +1,19 @@
-#include "main.h"
 #include <stdio.h>
-/**
- * fibonacc - this function checks if its parameter is lower case or uper case
- * @c: the parameter in form of an int
- * Return: 1 if lowercase and 0 if something else
- */
 
-int main(void)
-{
-	int i = 0;
-	int a = 1;
-	int b = 2;
-	int sum;
+int fibonacci(int n) {
+    if (n <= 1) {
+        return n;
+    } else {
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+}
 
-	_putchar(a + '0');
-	_putchar(b + '0');
-	sum = a + b;
+int main() {
+    int n = 51; // You can change n to calculate Fibonacci numbers for different positions.
+    for (int i = 0; i < n; i++)
+    {
 
-	int fib = sum
-	while (i < 96)
-	{
-		
-	}
+        printf("%d\n", fibonacci(i));
+    }
+    return 0;
 }
