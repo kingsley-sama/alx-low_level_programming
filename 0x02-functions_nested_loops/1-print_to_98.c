@@ -1,24 +1,19 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * print_alphabet_x10 - prints the string _putchar;
+ * print_to_98 - prints the first n natural numbers
+ * @n: the number of natural numbers to be printed
  * Return: void
  */
-void print_alphabet_x10(void)
+
+void print_to_98(int n)
 {
-	int j = 0;
+	int i = 0;
 
-	while (j < 10)
+	printf("%d", n);
+	while (i < n)
 	{
-		int i = 97;
-
-		while (i < 123)
-		{
-			_putchar(i);
-			i++;
-		}
-		_putchar('\n');
-		j++;
+		printf("%d, ", i);
+		i++;
 	}
-
 }
