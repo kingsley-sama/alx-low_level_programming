@@ -8,8 +8,9 @@
 
 void print_to_98(int n)
 {
-	int i = n;
+	int i = n - 1;
 
+	printf("%d ", n);
 	if (i > 0)
 	{
 		while (i >= 98)
