@@ -5,9 +5,11 @@
  *
  * Return: Always 0.
  */
+int write();
 int main(void)
 {
     int r;
+    
 
     print_last_digit(98);
     print_last_digit(0);
