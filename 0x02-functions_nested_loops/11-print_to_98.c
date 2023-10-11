@@ -10,9 +10,13 @@ void print_to_98(int n)
 {
 	int i = n;
 
-	while (i >= 98)
+	if (i > 0)
 	{
-		printf("%d, ", i);
-		i++;
+		while (i >= 98)
+		{
+			printf("%d, ", i);
+			i--;
+		}
 	}
+
 }
