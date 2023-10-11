@@ -27,8 +27,5 @@ int add(int a, int b)
 
 		_putchar('-');
 	}
-	_putchar(c + 48);
-	_putchar(d + 48);
-	_putchar('\n');
-	return 0;
+	return sum;
 }
