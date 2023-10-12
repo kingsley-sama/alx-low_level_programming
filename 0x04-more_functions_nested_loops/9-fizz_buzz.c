@@ -1,24 +1,25 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * print_square - prints a square to the terminal;
- *@size: the number of ‘#’ to be used
- * Return: void
+ * main - fizz buzz for numebrs from i - 100;
+ * Return: 0
  */
-void print_square(int size)
+
+int main(void)
 {
-	int j = 0;
+	char *fizz = "Fizz";
+	char *buzz = "Buzz";
+	int i = 1;
 
-	while (j < size)
+	while (i < 101)
 	{
-		int i;
-
-		while (i < size)
-		{
-			_putchar('#');
-			i++;
-		}
-		_putchar('\n');
-		j++;
+		if (i % 3 == 0)
+			printf("%s", fizz);
+		else if (i % 5 == 0)
+			printf("%s", buzz);
+		else
+			printf("%d", 8);
+		i++;
 	}
+	return (0);
 }
