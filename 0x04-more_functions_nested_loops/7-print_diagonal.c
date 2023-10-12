@@ -1,17 +1,17 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * print_line - prints a line to the terminal;
- *@n: the number of ‘_’ to be used
+ * print_diagonal - prints a diagonals to the terminal;
+ *@n: the number of ‘\’ to be used
  * Return: void
  */
-void print_line(int n)
+void print_diagonal(int n)
 {
 	int j = 0;
 
-	while (j < n)
+	while (j < n && n > 0)
 	{
-		_putchar('_');
+		_putchar('\\');
 		j++;
 	}
 	_putchar('\n');
