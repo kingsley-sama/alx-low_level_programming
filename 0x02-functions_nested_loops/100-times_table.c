@@ -1,56 +1,49 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_times_table - prints the times table
+ * print_times_table - Print the `n` times table, starting with 0.
+ * @n: int type number
  * Return: void
  */
-
 void print_times_table(int n)
 {
-	if (n >= 0 && n < 15)
+	int x = 0, y, z;
+
+	if (n > 15 || n < 0)
+		return;
+	while (x <= n)
 	{
-
-
-		int i, j, a, b, c, d;
-
-		for (i = 0; i < n; i++)
+		for (y = 0; y <= n; y++)
 		{
-			for (j = 0; j < n; j++)
+			z = x * y;
+			if (z > 99)
 			{
-				a = i * j;
-				b = (a / 10) % 10;
-				d = a / 100;
-				c = a % 10;
-				if (d > 0 && b > 0 && j != (n - 1))
-				{
-					_putchar(d + 48);
-					_putchar(b + 48);
-					_putchar(c + 48);
-					_putchar(',');
-					_putchar(' ');
-				}
-				else if (d == 0 && b > 0 && j != (n - 1))
-				{
-					if (j == 0)
-						;
-					else
-						_putchar(' ');
-					_putchar(c + 48);
-					_putchar(',');
-					_putchar(' ');
-				}
-				else if (b <= 0 && j == (n - 1))
-				{
-					_putchar(' ');
-					_putchar(c + 48);
-				}
-				else if (b > 0 && j == (n - 1))
-				{
-					_putchar(b + 48);
-					_putchar(c + 48);
-				}
+				_putchar(z / 100 + '0');
+				_putchar((z / 10 % 10) + '0');
+				_putchar(z % 10 + '0');
 			}
-			_putchar('\n');
+			else if (z > 9)
+			{
+				_putchar(' ');
+				_putchar(z / 10 + '0');
+				_putchar(z % 10 + '0');
+			}
+			else if (y != 0)
+			{
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(z + '0');
+			}
+			else
+				_putchar(z + '0');
+
+			if (y != n)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
 		}
+		_putchar('\n');
+		x++;
 	}
 }
