@@ -14,16 +14,25 @@ int main(void)
 
 	while (i < 101)
 	{
-		if (i % 3 == 0 && i % 5 != 0)
-			printf("%s", fizz);
-		else if (i % 5 == 0 && i % 3 != 0)
-			printf("%s", buzz);
-		else if (i % 3 == 0 && i % 5 == 0)
-			printf("%s", fizzbuss);
+		if (i < 100)
+		{
+			if (i % 3 == 0 && i % 5 != 0)
+				printf("%s ", fizz);
+			else if (i % 5 == 0 && i % 3 != 0)
+				printf("%s ", buzz);
+			else if (i % 3 == 0 && i % 5 == 0)
+				printf("%s ", fizzbuss);
 
+			else
+				printf("%d ", i);
+		}
 		else
-			printf("%d", 8);
+		{
+			printf("%s\n", buzz);
+		}
+
 		i++;
 	}
+
 	return (0);
 }
