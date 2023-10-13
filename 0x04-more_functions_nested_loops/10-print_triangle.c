@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * print_square - prints a square to the terminal;
+ * print_triangle - prints a square to the terminal;
  *@size: the number of ‘#’ to be used
  * Return: void
  */
@@ -11,7 +11,6 @@ void print_triangle(int size)
 
 	if (size <= 0)
 	{
-		_putchar('\n');
 	}
 	else
 	{
