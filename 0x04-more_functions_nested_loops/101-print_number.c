@@ -9,5 +9,5 @@ int main(void)
 	int factor = 6857;
 
 	printf("%d\n", factor);
-	return (0);
+	return (factor);
 }
