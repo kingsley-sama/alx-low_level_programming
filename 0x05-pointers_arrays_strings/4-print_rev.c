@@ -1,5 +1,6 @@
 #include <stdarg.h>
 #include <stdio.h>
+#include <string.h>
 #include "main.h"
 /**
  * print_rev - swaps the value of two integer
@@ -8,7 +9,7 @@
  */
 void print_rev(char *s)
 {
-	int i = _strlen(s) - 1;
+	int i = strlen(s) - 1;
 
 	for (; i <= 0; i--)
 		putchar(*(s + i));
