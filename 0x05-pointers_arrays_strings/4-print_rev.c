@@ -13,10 +13,11 @@ void print_rev(char *s)
 
 	for (i = 0; *(s + i) != '\0'; i++)
 		;
-
-	printf("%d", i);
 	for (; i >= 0; i--)
-		putchar(*(s + i));
+		if (*(s + i) == '\0')
+			;
+		else
+			putchar(*(s + i));
 
 	putchar('\n');
 }
