@@ -5,14 +5,16 @@
 /**
  * print_rev - swaps the value of two integer
  * Return: i the length of the string
- *@s: this is the string to be printed out
+ *@s: this is the string to be reversed and printed out
  */
 void print_rev(char *s)
 {
-	int i = strlen(s) - 1;
+	int i;
 
-	for (; i <= 0; i--)
-		_putchar(*(s + i));
-	_putchar('\n');
+	for (i = 0; *(s + i) != '\0'; i++)
+		;
+
+	for (; i >= 0; i--)
+		putchar(*(s + i));
 
 }
