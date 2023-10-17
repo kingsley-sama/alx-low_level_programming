@@ -25,7 +25,7 @@ void puts_half(char *s)
 
 	while (s[n] != '\0')
 	{
-		if (s[n] == '\n')
+		if (s[n] == '\n' || s[n] == '\0')
 		{
 			n++;
 			continue;
