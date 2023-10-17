@@ -3,9 +3,11 @@
 #include <string.h>
 #include "main.h"
 /**
- * rev_string - swaps the value of two integer
+ * _strcpy - copies a string and return the copy
  * Return: i the length of the string
- *@s: this is the string to be printed out
+ *@src: this is the source string
+ *@dest: this is the destination string
+ *Return: the destination string
  */
 char *_strcpy(char *dest, char *src)
 {
@@ -15,5 +17,6 @@ char *_strcpy(char *dest, char *src)
 		;
 	for (j = 0; j < i; j++)
 		*(dest + j) = *(src + j);
+	return (dest);
 
 }
