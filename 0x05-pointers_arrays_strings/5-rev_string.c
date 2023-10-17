@@ -1,4 +1,5 @@
 #include <stdarg.h>
+#include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 #include "main.h"
@@ -26,4 +27,5 @@ void rev_string(char *s)
 
 
 	putchar('\n');
+	exit(0);
 }
