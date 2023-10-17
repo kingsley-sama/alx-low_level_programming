@@ -4,7 +4,6 @@
 #include "main.h"
 /**
  * _strcpy - copies a string and return the copy
- * Return: i the length of the string
  *@src: this is the source string
  *@dest: this is the destination string
  *Return: the destination string
@@ -16,7 +15,10 @@ char *_strcpy(char *dest, char *src)
 	for (i = 0; *(src + i) != '\0'; i++)
 		;
 	for (j = 0; j < i; j++)
-		*(dest + j) = *(src + j);
+		if (*(src + j) == '\n')
+			;
+		else
+			*(dest + j) = *(src + j);
 	return (dest);
 
 }
