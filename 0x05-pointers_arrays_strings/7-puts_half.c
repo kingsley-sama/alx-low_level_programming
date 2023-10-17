@@ -37,7 +37,7 @@ void puts_half(char *s)
 		{
 			if (*(s + i) != '\0')
 			{
-				putchar(*(s + i));
+				putchar(*(s + n));
 			}
 
 			else
