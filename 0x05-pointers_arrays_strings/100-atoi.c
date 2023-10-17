@@ -1,5 +1,4 @@
 #include <stdarg.h>
-#include <stdbool.h>
 #include <stdio.h>
 #include "main.h"
 /**
@@ -11,7 +10,6 @@ int _atoi(const char *str)
 {
 	int result = 0;
 	int sign = 1;
-	bool started = false;
 
 	while (*str == ' ' || *str == '\t')
 	{
