@@ -20,16 +20,11 @@ void puts_half(char *s)
 	}
 	else
 	{
-		n = (i - 1) / 2;
+		n = (i + 1) / 2;
 	}
 
 	while (s[n] != '\0')
 	{
-		if (s[n] == '\n' || s[n] == '\0')
-		{
-			n++;
-			continue;
-		}
 		putchar(s[n]);
 		n++;
 	}
