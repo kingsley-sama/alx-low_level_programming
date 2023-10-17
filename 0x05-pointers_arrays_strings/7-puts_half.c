@@ -3,8 +3,8 @@
 #include <string.h>
 #include "main.h"
 /**
- * rev_string - swaps the value of two integer
- * Return: i the length of the string
+ * puts_half - prints the last half of a string
+ * Return: void
  *@s: this is the string to be printed out
  */
 void puts_half(char *s)
