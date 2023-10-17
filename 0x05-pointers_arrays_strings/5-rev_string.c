@@ -3,11 +3,11 @@
 #include <string.h>
 #include "main.h"
 /**
- * print_rev - swaps the value of two integer
- * Return: i the length of the string
+ * rev_string - swaps the value of two integer
+ * Return: void
  *@s: this is the string to be reversed and printed out
  */
-void print_rev(char *s)
+void rev_string(char *s)
 {
 	int i;
 
