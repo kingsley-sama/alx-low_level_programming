@@ -16,19 +16,34 @@ void puts_half(char *s)
 	if (i % 2 == 0)
 	{
 		n = i / 2;
-		while (n < i)
+		while (n <= i)
 		{
-			putchar(*(s + n));
-			n++;
+
+			if (*(s + i) != '\0')
+			{
+				putchar(*(s + n));
+			}
+
+			else
+			{
+				;
+			}
 		}
 	}
 	else
 	{
 		n = (i - 1) / 2;
-		while (n < i)
+		while (n <= i)
 		{
-			putchar(*(s + n));
-			n++;
+			if (*(s + i) != '\0')
+			{
+				putchar(*(s + i));
+			}
+
+			else
+			{
+				;
+			}
 		}
 	}
 	putchar('\n');
