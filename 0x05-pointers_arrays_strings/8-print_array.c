@@ -3,20 +3,20 @@
 #include <string.h>
 #include "main.h"
 /**
- * rev_string - swaps the value of two integer
+ * print_array - swaps the value of two integer
  * Return: i the length of the string
- *@s: this is the string to be printed out
+ *@a: the integer array
+ *@n: the index to be printed out;
  */
-void puts_half(char *s)
+void print_array(int *a, int n)
 {
 	int i;
 
-	for (i = 0; *(s + i) != '\0'; i++)
-		;
-	for (; i >= 0; i--)
-		if (*(s + i) == '\0')
-			;
-		else
-			putchar(*(s + i));
+	for (i = 0; i <= n; i++)
+	{
+		printf("%d", *(a + i));
+	}
+
+	putchar('\n');
 
 }
