@@ -14,10 +14,10 @@ void rev_string(char *s)
 	for (i = 0; *(s + i) != '\0'; i++)
 		;
 	for (; i >= 0; i--)
-		if (*(s + i) == '\0')
-			;
-		else
+		if (*(s + i) != '\0')
 			putchar(*(s + i));
+		else
+			;
 
 	putchar('\n');
 }
