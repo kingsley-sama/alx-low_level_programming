@@ -7,16 +7,13 @@
  * Return: i the length of the string
  *@s: this is the string to be printed out
  */
-void puts_half(char *s)
+char *_strcpy(char *dest, char *src)
 {
-	int i;
+	int i, j;
 
-	for (i = 0; *(s + i) != '\0'; i++)
+	for (i = 0; *(src + i) != '\0'; i++)
 		;
-	for (; i >= 0; i--)
-		if (*(s + i) == '\0')
-			;
-		else
-			putchar(*(s + i));
+	for (j = 0; j < i; j++)
+		*(dest + j) = *(src + j);
 
 }
