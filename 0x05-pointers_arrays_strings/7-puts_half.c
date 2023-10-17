@@ -19,6 +19,7 @@ void puts_half(char *s)
 		while (n <= i)
 		{
 			putchar(*(s + n));
+			putchar('\b');
 			n++;
 		}
 	}
@@ -28,6 +29,7 @@ void puts_half(char *s)
 		while (n <= i)
 		{
 			putchar(*(s + n));
+			putchar('\n');
 			n++;
 		}
 	}
