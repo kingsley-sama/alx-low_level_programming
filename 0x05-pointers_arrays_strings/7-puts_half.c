@@ -11,40 +11,23 @@ void puts_half(char *s)
 {
 	int i, n;
 
-	for (i = 0; *(s + i) != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 		;
+
 	if (i % 2 == 0)
 	{
 		n = i / 2;
-		while (n <= i)
-		{
-
-			if (*(s + n) != '\0')
-			{
-				putchar(*(s + n));
-			}
-
-			else
-			{
-				;
-			}
-		}
 	}
 	else
 	{
 		n = (i - 1) / 2;
-		while (n <= i)
-		{
-			if (*(s + n) != '\0')
-			{
-				putchar(*(s + n));
-			}
-
-			else
-			{
-				;
-			}
-		}
 	}
+
+	while (s[n] != '\0')
+	{
+		putchar(s[n]);
+		n++;
+	}
+
 	putchar('\n');
 }
