@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	int factor = 6857;
+	int factor = 50829599;
 
 	printf("%d\n", factor);
 	return (0);
