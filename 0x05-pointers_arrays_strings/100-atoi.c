@@ -18,11 +18,11 @@ int _atoi(char *s)
 		if (*(s + i) == '-')
 			j++;
 		else if (isdigit(*(s + i)))
-			k = k * 10 - (s[i] - '0');
+			k = k * 10 + (s[i] - '0');
 	}
 	if (j % 2 == 0)
-		return (-k);
-	else
 		return (k);
+	else
+		return (-k);
 
 }
