@@ -2,25 +2,25 @@
 #include <string.h>
 #include "main.h"
 /**
- * _strcmp - compares two strings
- *@s1: this is the left string
- *@s2: this the right string
+ * reverse_array - compares two strings
+ *@n: number of elements in the array
+ *@a: integer pointer to the array
  * Return: 0 if s1 == s2, -15 if s1 > s2; 15 is s1 < s2
  */
 
-int _strcmp(char *s1, char *s2)
+void reverse_array(int *a, int n)
 {
 	int i = 0;
+	int b = n - 1;
 
-	while (*(s1 + i) != '\0' && *(s2 + i) != '\0')
+	while (a[i] < n / 2)
 	{
-		if (*s1 > *s2)
-			return (15);
-		else if (*s1 < *s2)
-			return (-15);
-		else if (*s1 == *s2)
-			return (0);			;
+		int j;
 
+		j = a[i];
+		a[i] = a[b - i];
+		a[b - i] = j;
+		i++;
 	}
-	return (0);
+
 }
