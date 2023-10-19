@@ -5,7 +5,7 @@
  * reverse_array - compares two strings
  *@n: number of elements in the array
  *@a: integer pointer to the array
- * Return: 0 if s1 == s2, -15 if s1 > s2; 15 is s1 < s2
+ * Return: void
  */
 
 void reverse_array(int *a, int n)
