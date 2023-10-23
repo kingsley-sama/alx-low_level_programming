@@ -2,20 +2,21 @@
 #include <stdio.h>
 
 /**
- *_memcpy - copies n bytes from and address
- *@dest: this is the destination for storing the bytes
- *@src: this is the source destination of the source
- *@n: this is the number of bytes to be copied
- *Return: dest
+ *_memset - copies n bytes from and address
+ *@s: this is the destination to be written
+ *@b: this is the content to fill the bytes with
+ *@n: this is the number of bytes to fill
+ *Return: s
  */
-char *_memcpy(char *dest, char *src, unsigned int n)
+char *_memset(char *s, char b, unsigned int n)
 {
 	int i;
 
 	i = 0;
 	while (i < n)
 	{
-		*(dest + i) = *(src + i);
+		*(s + i) = b;
+		i++;
 	}
-	return (dest);
+	return (s);
 }
