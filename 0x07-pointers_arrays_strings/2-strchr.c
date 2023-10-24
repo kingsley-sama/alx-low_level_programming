@@ -15,11 +15,11 @@ char *_strchr(char *s, char c)
 	{
 		if (*(s + i) == c)
 			return (s + i);
-		else if (*(s + i + 1) == c)
-			return (s + i + 1);
+		else if (*(s + 1) == c)
+			return (s + 1);
 
 		i++;
 
 	}
-	return (s + i + 1);
+	return (s + 1);
 }
