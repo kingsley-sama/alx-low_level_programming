@@ -5,12 +5,11 @@
  * Return: void
  *@s: string input
  */
-int _strlen_recursion(char *s)
+int _pow_recursion(int x, int y)
 {
-
-	if (*s == '\0')
-	{
-		return(1);
-	}
-	return(_strlen_recursion(s + 1) + 1);
+	if (y < 0)
+		return (-1);
+	if (y == 0)
+		return (1);
+	return (x * _pow_recursion(x, y - 1));
 }

@@ -5,12 +5,12 @@
  * Return: void
  *@s: string input
  */
-int _strlen_recursion(char *s)
+int factorial(int n)
 {
-
-	if (*s == '\0')
-	{
-		return(1);
-	}
-	return(_strlen_recursion(s + 1) + 1);
+	if (n == 0)
+		return (1);
+	if (n < 0)
+		return (-1);
+	n = n * factorial(n-1);
+	return (n);
 }
