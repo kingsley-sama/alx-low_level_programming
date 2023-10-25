@@ -1,16 +1,18 @@
 #include "main.h"
 #include <stdio.h>
 /**
- *_strlen_recursion - This returns the lenght of a string
+ *_puts_recursion - This function
  * Return: void
- *@s: string input
+ *@s: this i
  */
-int _strlen_recursion(char *s)
+void _puts_recursion(char *s)
 {
-
 	if (*s == '\0')
 	{
-		return(0);
+		putchar('\n');
+		return;
 	}
-	return(_strlen_recursion(s + 1) + 1);
+	_puts_recursion(s + 1);
+	putchar(*s);
+
 }
