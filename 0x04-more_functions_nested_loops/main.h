@@ -6,6 +6,7 @@
  * Return: 0
  * @c: character to be printed out
  */
+#include <stdio.h>
 int _putchar(char c);
 int _isupper(int c);
 int _isdigit(int c);

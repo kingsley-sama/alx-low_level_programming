@@ -1,13 +1,32 @@
+#include "main.h"
 #include <stdio.h>
-
 /**
- * main - prints the highest prime factor of  612852475143
- * Return: Always 0.
+ * print_number - prints an integer out bit by bit
+ *@n: this is the integer to be printed out
+ * Return: void
+ * notice how a number (i) is multiplied by 10 continuosly
+ * as long as the input sting is not elimiated
  */
-int main(void)
-{
-	int factor = 6857;
 
-	printf("%d\n", factor);
-	return (factor);
+void print_number(int n)
+{
+	int i, k;
+
+	i = 1;
+	if (n < 0)
+	{
+		putchar('-');
+		n = -1 * n;
+	}
+	k = n;
+	while (n / 10 > 0)
+	{
+		n /= 10;
+		i *= 10;
+	}
+	while (i > 0)
+	{
+		putchar((k / i) % 10 + '0');
+		i /= 10;
+	}
 }
