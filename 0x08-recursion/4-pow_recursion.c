@@ -1,9 +1,10 @@
 #include "main.h"
 #include <stdio.h>
 /**
- *_strlen_recursion - This returns the lenght of a string
- * Return: void
- *@s: string input
+ *_pow_recursion - returns x to power y
+ * Return: x to power y
+ *@x: number
+ *@y: base
  */
 int _pow_recursion(int x, int y)
 {
