@@ -6,8 +6,6 @@
  *is_palindrome - This function
  * Return: void
  *@s: this i
- *@start : this is the start index
- *@end : this is the end index
  */
 int is_palindrome_recursive(char *s, int start, int end);
 int is_palindrome(char *s)
