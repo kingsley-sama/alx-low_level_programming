@@ -9,10 +9,16 @@
 char *_strdup(char *str)
 {
 	unsigned int i, size;
-	char *arr = (char *) malloc(sizeof(char) * (strlen(str) + 1));
+	char *arr;
 
+	if (str == NULL)
+	{
+		arr = "";
+		return (str);
+	}
+	arr = (char *) malloc(sizeof(char) * (strlen(str) + 1));
 	size = strlen(str);
-	if (str == NULL || arr == NULL)
+	if (arr == NULL)
 	{
 		return (NULL);
 	}
