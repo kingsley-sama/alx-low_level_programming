@@ -2,9 +2,11 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * _puts - swaps the value of two integer
- * Return: i the length of the string
+ * _strspn - swaps the value of two integer
  *@s: this is the string to be printed out
+ *@accept: this is the string to be printed out
+ * Return: i the length of the string
+
  */
 unsigned int _strspn(char *s, char *accept)
 {
