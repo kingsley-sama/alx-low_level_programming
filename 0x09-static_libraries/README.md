@@ -1,3 +1,1 @@
-# Static Libraries
-# Static Library libmy.a
-static libraries 
+# 0x09-static libraries
