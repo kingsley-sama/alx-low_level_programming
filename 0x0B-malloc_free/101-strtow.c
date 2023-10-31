@@ -7,17 +7,19 @@
  */
 char **strtow(char *str)
 {
+	int i;
+	char *word = str;
+	int len = (int)strlen(str) + 1;
+	char **words = (char **)malloc(sizeof(char *) * len);
+
 	if (str == NULL || *str == '\0')
 		return (NULL);
-	int len = (int)strlen(str) + 1;
 
-	char **words = (char **)malloc(sizeof(char *) * len);
 
 	if (words == NULL)
 		return (NULL);
 	memset(words, 0, sizeof(char *) * len);
-	int i;
-	char *word = str;
+
 
 	for (i = 0; i < len - 1; i++)
 	{
