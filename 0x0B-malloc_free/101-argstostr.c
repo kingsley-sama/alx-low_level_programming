@@ -1,37 +1,34 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 /**
- *argstostr - concatenates n number of strings
- *@s1: first input
- *@s2: second input
- *Return: a pointer to the duplicate
+ *strtow - Splits a string into words.
+ *@str: The string to split.
+ *Return: An array of pointers to the words in the stringq
  */
-char *argstostr(int ac, char **av)
+char **strtow(char *str)
 {
-	int i = 0, j = 0, k;
-	int a = 0, b = 0;
-	char *arr;
+	if (str == NULL || *str == '\0')
+		return (NULL);
+	size_t len = strlen(str) + 1;
 
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
-	for (; s1[i] != '\0'; i++)
-		;
-	for (; s2[j] != '\0'; j++)
-		;
-	k = i + j;
-	arr = (char *)malloc(sizeof(char) * k + 1);
-	if (arr != NULL)
+	char **words = (char **)malloc(sizeof(char *) * len);
+
+	if (words == NULL)
+		return (NULL);
+	memset(words, 0, sizeof(char *) * len);
+	int i;
+	char *word = str;
+
+	for (i = 0; i < len - 1; i++)
 	{
-		for (; s1[a] != '\0'; a++)
-			arr[a] = s1[a];
-		for (; s2[b] != '\0'; b++)
-			arr[a + b] = s2[b];
-		arr[k] = '\0';
-		return (arr);
+		while (*word == ' ')
+			word++;
+		if (*word == '\0')
+			break;
+		words[i] = word;
+		while (*word != ' ')
+			word++;
+		*word = '\0';
 	}
-	return (NULL);
+	return (words);
 }
