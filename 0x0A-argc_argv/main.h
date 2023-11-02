@@ -1,3 +1,4 @@
 #ifndef LIBMY_A
-    #define LIBMY_A
-    #endif
+
+#define LIBMY_A
+#endif
