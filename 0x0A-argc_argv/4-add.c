@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#
 /**
  *main - sums all command line arguments
  *@argc: total number of command line arguments
@@ -9,7 +10,9 @@
  */
 int main(int argc, char **argv)
 {
-	int i, a, sum;
+	int i, sum;
+	long a;
+	char *endptr;
 
 	i = 0;
 	(void)argc;
@@ -26,8 +29,8 @@ int main(int argc, char **argv)
 		}
 		else
 		{
-			a = atoi(*(argv + i));
-			if (a)
+			a = strtol(argv[i], &endptr, 10);
+			if (*endptr == '\0')
 				sum += a;
 			else
 			{
