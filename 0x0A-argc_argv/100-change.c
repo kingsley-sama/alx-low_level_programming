@@ -13,6 +13,7 @@ int main(int argc, char **argv)
 	int amount;
 	int i = 0, j = 0;
 
+	(void)argc;
 	if (argc != 2)
 	{
 		printf("Error\n");
@@ -33,5 +34,5 @@ int main(int argc, char **argv)
 		}
 	}
 	printf("%d\n", j);
-	return (argc);
+	return (0);
 }

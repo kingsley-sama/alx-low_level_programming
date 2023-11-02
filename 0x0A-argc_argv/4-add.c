@@ -12,6 +12,7 @@ int main(int argc, char **argv)
 	int i, a, sum;
 
 	i = 0;
+	(void)argc;
 	while (*(argv + i) != NULL)
 	{
 		if (argc == 1)
@@ -37,5 +38,5 @@ int main(int argc, char **argv)
 		i++;
 	}
 	printf("%d\n", sum);
-	return (argc);
+	return (0);
 }

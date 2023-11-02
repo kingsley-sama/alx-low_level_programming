@@ -12,8 +12,9 @@ int main(int argc, char **argv)
 	int i;
 
 	i = 0;
+	(void)argc;
 	while (*(argv + i) != NULL)
 		i++;
 	printf("%d\n", i - 1);
-	return (argc);
+	return (0);
 }
