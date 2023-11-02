@@ -16,7 +16,7 @@ int *array_range(int min, int max)
 
 	if (min > max)
 		return (NULL);
-	arr = calloc(sizeof(int), range);
+	arr = calloc(sizeof(int), range + 1);
 	if (arr == NULL)
 		return (NULL);
 	while (i <= range)
