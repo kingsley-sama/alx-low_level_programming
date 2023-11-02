@@ -1,1 +1,3 @@
-# 0x0A-arg_argv
+#ifndef LIBMY_A
+    #define LIBMY_A
+    #endif
