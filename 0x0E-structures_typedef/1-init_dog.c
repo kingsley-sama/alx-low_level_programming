@@ -8,10 +8,13 @@
  * @age: this is the address to the float age of the dog
  * @owner: this is the address of string owner
  *
-*/
+ */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	d->name = name;
-	d->owner = owner;
-	d->age = age;
+	if (d)
+	{
+		d->name = name;
+		d->owner = owner;
+		d->age = age;
+	}
 }
