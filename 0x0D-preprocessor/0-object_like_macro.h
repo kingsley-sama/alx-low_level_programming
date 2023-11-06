@@ -2,5 +2,3 @@
 #define MACRO_H
 #define SIZE 102
 #endif
-
-
