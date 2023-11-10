@@ -13,7 +13,11 @@ void print_opcodes(int num_bytes)
 	unsigned char *func_ptr = (unsigned char *)print_opcodes;
 
 	for (i = 0; i < num_bytes; i++)
-		printf("%02x ", func_ptr[i]);
+	{
+		printf("%02x", func_ptr[i]);
+		if (i < num_bytes - 1)
+			printf(" ");
+	}
 	printf("\n");
 }
 /**
