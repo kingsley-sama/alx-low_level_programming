@@ -9,10 +9,9 @@
 void print_all(const char * const format, ...)
 {
 	char *str;
-	int num;
-	char c;
+	int num, i = 0;
+	char c, s;
 	float float_num;
-	unsigned int i = 0;
 	va_list args;
 
 	va_start(args, format);
@@ -23,25 +22,28 @@ void print_all(const char * const format, ...)
 		case 's':
 			str = va_arg(args, char *);
 			if (str == NULL)
-				printf("(nil)%s", (format[i + 1] != '\0') ? ", " : "");
-			printf("%s%s", str, (format[i + 1] != '\0') ? ", " : "");
+				printf("(nil)");
+			printf("%s", str);
 
 			break;
 		case 'c':
 			c = (char)va_arg(args, int);
-			printf("%c%s", c, (format[i + 1] != '\0') ? ", " : "");
+			printf("%c", c);
 			break;
 		case 'i':
 			num = va_arg(args, int);
-			printf("%d%s", num, (format[i + 1] != '\0') ? ", " : "");
+			printf("%d", num);
 			break;
 		case 'f':
 			float_num = (float)va_arg(args, double);
-			printf("%f%s", float_num, (format[i + 1] != '\0') ? ", " : "");
+			printf("%f", float_num);
 			break;
 		default:
 			break;
 		}
+		s = format[i];
+		if (format[i + 1] != '\0' && (s == 'i' || s == 's' || s == 'f' || s == 'c'))
+			printf(", ");
 		i++;
 	}
 	putchar('\n');
