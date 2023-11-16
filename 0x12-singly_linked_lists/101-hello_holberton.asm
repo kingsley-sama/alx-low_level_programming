@@ -1,5 +1,5 @@
 section .data
-    hello_message db "Hello, Holberton", 0
+    hello_message db "Hello, Holberton\n", 0
 
 section .text
     global main
@@ -15,5 +15,3 @@ main:
     mov rax, 60            ; syscall: exit
     xor rdi, rdi           ; status: 0
     syscall
-
-section .data
