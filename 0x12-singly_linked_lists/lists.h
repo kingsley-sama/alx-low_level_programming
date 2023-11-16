@@ -18,4 +18,5 @@ typedef struct list_s
 } list_t;
 size_t print_list(const list_t *h);
 void my_function(void) __attribute__((constructor));
+size_t list_len(const list_t *h);
 #endif
