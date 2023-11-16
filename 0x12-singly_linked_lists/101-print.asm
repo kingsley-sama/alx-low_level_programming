@@ -1,20 +1,19 @@
 section .data
-    msg db "hello world", 0xA
+    hello_message db "Hello, Holberton", 0
 
 section .text
-    global _start
+    global main
     extern printf
 
-_start:
+main:
     ; Prepare arguments for printf
-    mov rdi, format_string  ; Format string
-    mov rsi, msg            ; Argument for %s in the format string
-    call printf             ; Call printf function
+    mov rdi, hello_message ; Format string
+    mov rax, 0             ; Number of vector registers used (variadic function)
+    call printf            ; Call printf function
 
     ; Exit the program
-    mov rax, 60             ; syscall: exit
-    xor rdi, rdi            ; status: 0
+    mov rax, 60            ; syscall: exit
+    xor rdi, rdi           ; status: 0
     syscall
 
 section .data
-    format_string db "Message: %s", 0xA
