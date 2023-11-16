@@ -1,17 +1,15 @@
-section .data
-    hello_message db "Hello, Holberton\n", 0
+	global main
+	main	:
+	push rbp ; <- use 8 bytes of stack space, to align the stack
 
-section .text
-    global main
-    extern printf
+	mov rdi,formatStr ; first argument: format string
+	mov al,0 ; magic for varargs (0==no magic, to prevent a crash!)
 
-main:
-    ; Prepare arguments for printf
-    mov rdi, hello_message ; Format string
-    mov rax, 0             ; Number of vector registers used (variadic function)
-    call printf            ; Call printf function
+	extern printf
+	call printf
 
-    ; Exit the program
-    mov rax, 60            ; syscall: exit
-    xor rdi, rdi           ; status: 0
-    syscall
+	pop rbp
+	ret
+
+	formatStr:
+	db `hello holberton\n`,0
