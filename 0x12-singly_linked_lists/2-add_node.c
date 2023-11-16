@@ -1,20 +1,31 @@
 #include "lists.h"
 #include <stddef.h>
-#include <stdio.h> 
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-/**
- *list_len - this function adds a node to the head of  linked list
- *Return: pointer to the new node
- *@h: this is a pointer to first node of the linked list
- */
 
+/**
+ * add_node - adds a new node at the beginning of a linked list
+ * @head: a pointer to the pointer to the head of the linked list
+ * @str: the string to be duplicated and stored in the new node
+ * Return: the address of the new element, or NULL if it failed
+ */
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *n = malloc(sizeof(head));
+	list_t *new_node = malloc(sizeof(list_t));
 
-	if (n == NULL)
+	if (new_node == NULL)
 		return (NULL);
-	n->str = strdup(str);
-	return (n);
+	if (new_node == NULL)
+		return (NULL);
+	new_node->str = strdup(str);
+	if (new_node->str == NULL)
+	{
+		free(new_node);
+		return (NULL);
+	}
+	new_node->len = strlen(str);
+	new_node->next = *head;
+	*head = new_node;
+	return (new_node);
 }
