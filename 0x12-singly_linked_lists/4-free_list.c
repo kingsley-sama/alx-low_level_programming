@@ -1,40 +1,20 @@
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "lists.h"
+#include <stdlib.h>
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * free_list - frees a list_t linked list
+ * @head: a pointer to the head of the linked list
  */
-int main(void)
+void free_list(list_t *head)
 {
-    list_t *head;
-    list_t *new;
-    list_t hello = {"World", 5, NULL};
-    size_t n;
+    list_t *current = head;
+    list_t *next_node;
 
-    head = &hello;
-    new = malloc(sizeof(list_t));
-    if (new == NULL)
+    while (current != NULL)
     {
-        printf("Error\n");
-        return (1);
+        next_node = current->next;
+        free(current->str);
+        free(current);
+        current = next_node;
     }
-    new->str = strdup("Hello");
-    new->len = 5;
-    new->next = head;
-    head = new;
-    n = print_list(head);
-    printf("-> %lu elements\n", n);
-
-    printf("\n");
-    free(new->str);
-    new->str = NULL;
-    n = print_list(head);
-    printf("-> %lu elements\n", n);
-
-    free(new);
-    return (0);
 }
