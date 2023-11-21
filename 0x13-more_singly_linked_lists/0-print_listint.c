@@ -13,7 +13,7 @@ size_t print_listint(const listint_t *h)
 	const listint_t *copy = h;
 
         if (copy == NULL)
-		return (i);
+		return (0);
 	while (copy != NULL)
 	{
 		printf("%d\n", copy->n);
