@@ -16,6 +16,7 @@ size_t listint_len(const listint_t *h)
 		return (0);
 	while (copy != NULL)
 	{
+		copy = copy->next;
 		i++;
 	}
 	return (i);
