@@ -1,17 +1,15 @@
-#include <stdarg.h>
-#include <stdio.h>
 #include "main.h"
+
 /**
- * _puts - swaps the value of two integer
- * Return: i the length of the string
- *@s: this is the string to be printed out
+ * _puts - This is the function name
+ * @str: The function parameter
  */
-void _puts(char *s)
+
+void _puts(char *str)
 {
-	int i;
+	int b;
 
-	for (i = 0; *(s + i) != '\0'; i++)
-		putchar(*(s + i));
-	putchar('\n');
-
+for (b = 0; str[b] != '\0'; b++)
+_putchar (str[b]);
+_putchar ('\n');
 }

@@ -1,26 +1,25 @@
 #include "main.h"
-#include <stdio.h>
-#include <string.h>
-/**
- * _strncpy - This fuction concatenates n bytes of a string to another
- *@dest: this is the duplicate string
- *@src: the source string to be copied
- *@n: the number of bytes to be copied
- * Return: dest
- */
 
+/**
+  * _strncpy - The function name
+  * @src: The 1st function parameter
+  * @dest: The 2nd function parameter
+  * @n: The 3rd function parameter
+  * Return: dest
+  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i, j = strlen(src);
+	int c = 0;
 
-	i = 0;
-	while (i < n)
+	while (c < n && src[c] != '\0')
 	{
-		if (i < j)
-			*(dest + i) = *(src + i);
-		else
-			*(dest + i) = '\0';
-		i++;
+	dest[c] = src[c];
+	c++;
+	}
+	while  (c < n)
+	{
+	dest[c] = '\0';
+	c++;
 	}
 	return (dest);
 }

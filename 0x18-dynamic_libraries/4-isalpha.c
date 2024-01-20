@@ -1,19 +1,19 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
- * _isalpha - this function checks if its parameter is lower case or uper case
- * @c: the parameter in form of an int
- * Return: 1 if lowercase and 0 if something else
+ *  _isalpha- Entry point
+ *  Description- This function that checks for lowercase character
+ *  @c: The character
+ *  Return: return 1 or zero
  */
 
 int _isalpha(int c)
+
 {
-	if ((c  >= 'a' && c <= 'z') || (c  >= 'A' && c <= 'Z'))
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
 	{
 		return (1);
 	}
-	else
-	{
-		return (0);
-	}
+	return (0);
 }
+

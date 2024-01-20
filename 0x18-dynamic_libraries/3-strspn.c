@@ -1,22 +1,24 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- *_strchr - finds a value within a string
- *@s: this is the string to loop over
- *@c: this is the value to find
- *Return: address of the first match
+ * _strspn - This function gets the length of a prefix
+ *@s: The 1st parameter
+ *@accept: The 2nd parameter
+ *Return: characters counted
  */
-char *_strchr(char *s, char c)
+
+unsigned int _strspn(char *s, char *accept)
 {
-	int i;
+	int a;
+	int b;
 
-	i = 0;
-	while (*(s + i) != '\0')
+	for (a = 0; s[a] != '\0'; a++)
 	{
-		if (*(s + i) == c)
-			return ((s + i));
-
+		for (b = 0; s[a] != accept[b]; b++)
+		{
+			if (accept[b] == '\0')
+				return (a);
+		}
 	}
-	return (NULL);
+		return (0);
 }

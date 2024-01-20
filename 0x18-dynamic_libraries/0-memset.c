@@ -1,22 +1,20 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- *_memset - copies n bytes from and address
- *@s: this is the destination to be written
- *@b: this is the content to fill the bytes with
- *@n: this is the number of bytes to fill
+ * _memset - This function fills the first n bytes of a memory area
+ *@s: The 1st parameter s
+ *@b: The 2nd parameter b
+ *@n: The 3rd parameter n
  *Return: s
  */
+
 char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int i;
+	unsigned int a;
 
-	i = 0;
-	while (i < n)
+	for (a = 0; a < n; a++)
 	{
-		*(s + i) = b;
-		i++;
+		s[a] = b;
 	}
-	return (s);
+return (s);
 }

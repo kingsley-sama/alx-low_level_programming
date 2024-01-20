@@ -1,23 +1,20 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- *_strchr - finds a value within a string
- *@s: this is the string to loop over
- *@c: this is the value to find
- *Return: address of the first match
+ *_strchr - This function locates a character in a string
+ *@s: The 1st parameter
+ *@c: The 2nd parameter
+ *Return: s or null
  */
 char *_strchr(char *s, char c)
 {
-	while (*s != '\0')
-	{
-		if (*s == c)
-			return (s);
-		else if (*(s + 1) == c)
-			return (s + 1);
-
-		s++;
-
-	}
-	return (s + 1);
+while (*s != '\0')
+{
+if (*s == c)
+return (s);
+s++;
+}
+if (*s == c)
+return (s);
+return (NULL);
 }
