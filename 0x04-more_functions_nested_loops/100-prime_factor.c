@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <math.h>
-
 /**
  * main - prints the highest prime factor of any number n
  * Return: Always 0.
