@@ -1,0 +1,5 @@
+CC := gcc
+SRC := 	../0x1B.c-master/*.c
+OBJ := ../0x1B.c-master/*.o
+all:
+	$(CC) $(SRC) -o school
